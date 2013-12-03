@@ -137,6 +137,8 @@ module ReverseMarkdown
           "\n* * *\n"
         when :br
           "  \n"
+        when :sup
+          "^("
         when :table
           "\n\n"
         when :tr
@@ -184,6 +186,8 @@ module ReverseMarkdown
           end
         when :img
           "#{element['alt']}](#{element['src']}#{title_markdown(element)}) "
+        when :sup
+          ")"
         when :table
           "\n"
         when :tr
